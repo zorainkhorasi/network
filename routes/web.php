@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
+   // return view('welcome');
 });
 
 // Route::get('/dashboard', function () {
@@ -27,7 +29,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth','verified'])->group(function(){
 
-     Route::view('/dashboard', 'dashboard')->name('/dashboard');
+     Route::view('dashboard', 'dashboard')->name('dashboard');
     // Route::view('/add_product','form')->name('/add_product');
     // Route::view('/view_product','view_product')->name('/view_product');
     // Route::view('/addCart_product','addCart_product')->name('/addCart_product');
@@ -37,6 +39,8 @@ Route::middleware(['auth','verified'])->group(function(){
     Route::resource('product',ProductController::class);
 
     Route::get('addtoCart',[ProductController::class,'addtoCart'])->name('addtoCart');
+
+     //Route::get('logout',[AuthenticatedSessionController::class,'destroy'])->name('logout');
 
 
     //cart routes

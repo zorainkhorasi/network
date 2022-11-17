@@ -15,25 +15,25 @@
                             </li>
                             {{-- dashboard --}}
                             <li class="nav-item ">
-                                <a class="nav-link deactive" href="#" ><i class="fa fa-fw fa-user-circle"></i>Dashboard </a>
+                                <a class="nav-link deactive" href="{{route('dashboard')}}" ><i class="fa fa-fw fa-user-circle"></i>Dashboard </a>
 
                             </li>
 
                             <li class="nav-item ">
-                                <a class="nav-link deactive" href="{{route('product.create')}}" ><i class="fa fa-fw fa-user-circle"></i>Add Product </a>
+                                <a class="nav-link deactive" href="{{route('product.create')}}" ><i class="fab fa-opencart"></i>Add Product </a>
 
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link deactive" href="{{route('addtoCart')}}" ><i class="fa fa-fw fa-user-circle"></i>Product </a>
+                                <a class="nav-link deactive" href="{{route('addtoCart')}}" ><i class="fab fa-opencart"></i>Cart </a>
 
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link deactive" href="{{route('product.index')}}" ><i class="fa fa-fw fa-user-circle"></i>Product Details </a>
+                                <a class="nav-link deactive" href="{{route('product.index')}}" ><i class="fab fa-sistrix"></i>Product Details </a>
 
                             </li>
 
                             <li class="nav-item ">
-                                <a class="nav-link deactive" href="#" ><i class="fa fa-fw fa-user-circle"></i>Order Details </a>
+                                <a class="nav-link deactive" href="#" ><i class="fab fa-searchengin"></i>Order Details </a>
 
                             </li>
 
